@@ -22,13 +22,22 @@
         <section class="outcome-page">
             <p class="label">OUTCOME 05</p>
             <h1>Generative AI</h1>
+
             <h2 class="outcome-subtitle">
                 Describe how generative AI and large language models operate at a conceptual level and evaluate their appropriate use.
             </h2>
-            <!-- Paste your full outcome paragraph below -->
-            <p class="outcome-sentence"></p>
+
+            <div class="outcome-box">
+                <p class="outcome-sentence" id="personal-text"></p>
+            </div>
+
             <a href="index.html" class="button-outline">← Back to Home</a>
         </section>
     </main>
+
+    <script src="outcomes-content.js"></script>
+    <script>
+        document.getElementById('personal-text').textContent = outcomeTexts.generative.trim();
+    </script>
 </body>
 </html>
