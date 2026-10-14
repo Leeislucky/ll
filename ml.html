@@ -22,13 +22,22 @@
         <section class="outcome-page">
             <p class="label">OUTCOME 04</p>
             <h1>ML Fundamentals</h1>
+
             <h2 class="outcome-subtitle">
                 Explain fundamental machine learning approaches and distinguish between major learning paradigms.
             </h2>
-            <!-- Paste your full outcome paragraph below -->
-            <p class="outcome-sentence"></p>
+
+            <div class="outcome-box">
+                <p class="outcome-sentence" id="personal-text"></p>
+            </div>
+
             <a href="index.html" class="button-outline">← Back to Home</a>
         </section>
     </main>
+
+    <script src="outcomes-content.js"></script>
+    <script>
+        document.getElementById('personal-text').textContent = outcomeTexts.ml.trim();
+    </script>
 </body>
 </html>
