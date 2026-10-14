@@ -275,18 +275,18 @@ img {
     color: var(--accent);
 }
 
-/* Space + box for personal outcome paragraph */
+/* Soft green box for personal outcome writing */
 .outcome-box {
-    margin-top: 2.5rem;          /* little space after the subtitle */
+    margin-top: 2.5rem;
     padding: 1.75rem 2rem;
-    border: 1px solid #e0e0e0;    /* light border */
-    border-radius: 12px;          /* soft rounded corners */
-    background-color: #fafafa;    /* very light background */
-    max-width: 720px;             /* keeps it readable */
+    border: 1px solid #c8e6c9;          /* soft green border */
+    border-radius: 12px;
+    background-color: #f1f8e9;          /* very light green background */
+    max-width: 720px;
 }
 
 .outcome-box .outcome-sentence {
-    margin: 0;                    /* remove default paragraph margin */
+    margin: 0;
     line-height: 1.7;
 }
 
