@@ -22,16 +22,22 @@
         <section class="outcome-page">
             <p class="label">OUTCOME 03</p>
             <h1>AI Search and Reasoning</h1>
+
             <h2 class="outcome-subtitle">
                 Describe how core AI techniques such as search and adversarial reasoning are used to model intelligent behavior.
             </h2>
-            <!-- Paste your full outcome paragraph below -->
-            <p class="outcome-sentence">
-                I learned 
-                
-            </p>
+
+            <div class="outcome-box">
+                <p class="outcome-sentence" id="personal-text"></p>
+            </div>
+
             <a href="index.html" class="button-outline">← Back to Home</a>
         </section>
     </main>
+
+    <script src="outcomes-content.js"></script>
+    <script>
+        document.getElementById('personal-text').textContent = outcomeTexts.search.trim();
+    </script>
 </body>
 </html>
