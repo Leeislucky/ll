@@ -22,16 +22,22 @@
         <section class="outcome-page">
             <p class="label">OUTCOME 01</p>
             <h1>AI History</h1>
+
             <h2 class="outcome-subtitle">
                 Explain key moments in the historical development of AI and ML and relate them to modern AI systems.
             </h2>
+
             <div class="outcome-box">
-                <p class="outcome-sentence">
-                    I learned 
-                </p>
+                <p class="outcome-sentence" id="personal-text"></p>
             </div>
+
             <a href="index.html" class="button-outline">← Back to Home</a>
         </section>
     </main>
+
+    <script src="outcomes-content.js"></script>
+    <script>
+        document.getElementById('personal-text').textContent = outcomeTexts.history.trim();
+    </script>
 </body>
 </html>
