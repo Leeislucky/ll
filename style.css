@@ -275,6 +275,21 @@ img {
     color: var(--accent);
 }
 
+/* Space + box for personal outcome paragraph */
+.outcome-box {
+    margin-top: 2.5rem;          /* little space after the subtitle */
+    padding: 1.75rem 2rem;
+    border: 1px solid #e0e0e0;    /* light border */
+    border-radius: 12px;          /* soft rounded corners */
+    background-color: #fafafa;    /* very light background */
+    max-width: 720px;             /* keeps it readable */
+}
+
+.outcome-box .outcome-sentence {
+    margin: 0;                    /* remove default paragraph margin */
+    line-height: 1.7;
+}
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
     .outcome-cards {
