@@ -22,13 +22,22 @@
         <section class="outcome-page">
             <p class="label">OUTCOME 02</p>
             <h1>AI Ethics</h1>
+
             <h2 class="outcome-subtitle">
                 Identify and discuss ethical issues associated with AI and ML and their societal implications.
             </h2>
-            <!-- Paste your full outcome paragraph below -->
-            <p class="outcome-sentence"></p>
+
+            <div class="outcome-box">
+                <p class="outcome-sentence" id="personal-text"></p>
+            </div>
+
             <a href="index.html" class="button-outline">← Back to Home</a>
         </section>
     </main>
+
+    <script src="outcomes-content.js"></script>
+    <script>
+        document.getElementById('personal-text').textContent = outcomeTexts.ethics.trim();
+    </script>
 </body>
 </html>
