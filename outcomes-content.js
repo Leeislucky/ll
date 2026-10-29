@@ -30,7 +30,15 @@ const outcomeTexts = {
     `,
 
     search: `
-        Paste your full personal paragraph for AI Search and Reasoning here.
+        Reinforcement Learning and Self-Driving Cars
+
+Self-driving cars are designed to navigate roads, recognize traffic conditions, and make decisions without requiring the driver to control every movement. However, real-world driving is complicated by unusual situations, such as unexpected obstacles, animals crossing the road, and vehicles behaving unpredictably. Reinforcement learning offers one approach to improving how AI systems respond to these situations. Tesla has publicly described using reinforcement learning to improve its Full Self-Driving neural network, particularly in rare and difficult driving scenarios. [1]
+
+In reinforcement learning, an AI agent learns by interacting with an environment. At each step, the agent observes a state, chooses an action, and receives a reward based on the outcome. The environment then changes into a new state, and the process continues. For example, imagine a Tesla approaching an animal that suddenly enters the road. The state includes the vehicle’s position, speed, and the animal’s location. Possible actions include braking, slowing down, or steering away if it is safe. A reward system can encourage safer actions while penalizing dangerous outcomes, such as collisions. Over repeated training experiences, the agent can learn which actions tend to produce better results.
+
+One important algorithm used to explain this process is Q-learning. It estimates the long-term value of taking a particular action in a particular state. Rather than considering only the immediate reward, the agent also considers the potential rewards of future states. This helps explain how an AI system could learn to prioritize safety over short-term convenience. However, Q-learning is a simplified example of reinforcement learning, and Tesla has not publicly established that its production driving system uses this specific algorithm. Its actual system combines more complex neural networks and training methods.
+
+Reinforcement learning can improve adaptability by helping driving systems handle situations that are difficult to anticipate through manually written rules alone. Better decisions could reduce certain accidents, improve traffic flow, and make transportation more accessible. However, these benefits are not guaranteed. An imperfect reward system may encourage undesirable behavior, and an AI model that performs well in training may still struggle with unfamiliar real-world conditions. Therefore, reinforcement learning must be combined with careful testing, safety measures, and human oversight. Ultimately, the goal is not simply to teach a car how to drive, but to help it make safer decisions in a world that is constantly changing.
     `,
 
     ml: `
