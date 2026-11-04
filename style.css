@@ -2,7 +2,6 @@
    LEE'S PORTFOLIO — Clean light theme
    ========================================= */
 
-/* ---------- COLORS ---------- */
 :root {
     --bg: #ffffff;
     --bg-soft: #f7f7f8;
@@ -15,7 +14,9 @@
     --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
+
 /* ---------- RESET ---------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -29,7 +30,8 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    font-family: Inter, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Arial, sans-serif;
     line-height: 1.7;
     font-size: 16px;
 }
@@ -44,21 +46,29 @@ img {
     display: block;
 }
 
+
 /* ---------- NAVIGATION ---------- */
+
 .navbar {
     position: sticky;
     top: 0;
     z-index: 100;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
+
     padding: 18px 6%;
-    background: rgba(255, 255, 255, 0.92);
+
+    background: rgba(255, 255, 255, 0.94);
     border-bottom: 1px solid var(--border);
+
     backdrop-filter: blur(10px);
 }
 
 .logo {
+    flex-shrink: 0;
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -71,21 +81,27 @@ img {
 
 .navbar nav {
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px 20px;
 }
 
 .navbar nav a {
     color: var(--muted);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover,
+.navbar nav a[aria-current="page"] {
     color: var(--accent);
 }
 
+
 /* ---------- LABELS ---------- */
+
 .label {
     margin-bottom: 16px;
     color: var(--accent);
@@ -95,7 +111,9 @@ img {
     text-transform: uppercase;
 }
 
+
 /* ---------- HERO ---------- */
+
 .hero {
     min-height: 70vh;
     display: flex;
@@ -117,7 +135,7 @@ img {
     width: 180px;
     height: 180px;
     object-fit: cover;
-    border-radius: 50%;          /* circular avatar style */
+    border-radius: 50%;
     border: 1px solid var(--border);
     background: var(--bg-soft);
 }
@@ -132,12 +150,14 @@ img {
 
 .hero h1 .name {
     display: inline-block;
-    font-size: 1.35em;           /* makes "Lee" noticeably bigger */
+    font-size: 1.35em;
     font-weight: 700;
     color: var(--accent);
 }
 
+
 /* ---------- SECTIONS ---------- */
+
 .section {
     padding: 90px 6%;
     max-width: 1100px;
@@ -153,7 +173,9 @@ img {
     text-transform: uppercase;
 }
 
+
 /* ---------- ABOUT ---------- */
+
 .about-content h2 {
     font-size: 1.75rem;
     font-weight: 600;
@@ -165,7 +187,11 @@ img {
     color: var(--text-secondary);
     font-size: 1.05rem;
     line-height: 1.8;
-    max-width: 720px;
+    max-width: 760px;
+}
+
+.about-content p + p {
+    margin-top: 20px;
 }
 
 .about-content em {
@@ -173,7 +199,9 @@ img {
     font-style: italic;
 }
 
+
 /* ---------- OUTCOMES OVERVIEW ---------- */
+
 .outcomes-overview {
     background: var(--bg-soft);
     max-width: none;
@@ -196,7 +224,7 @@ img {
 
 .outcome-cards {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);   /* forces all 5 visible side-by-side on desktop */
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     max-width: 1100px;
     margin: 0 auto;
@@ -231,37 +259,168 @@ img {
     color: var(--text);
 }
 
+
 /* ---------- OUTCOME PAGES ---------- */
+
 .outcome-page {
     min-height: calc(100vh - 80px);
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 100px 6% 80px;
+    padding: 90px 6% 80px;
 }
 
 .outcome-page .label {
     margin-bottom: 12px;
 }
 
-.outcome-page h1 {
+.outcome-page > h1,
+.citation-page > h1 {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     letter-spacing: -1px;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
     line-height: 1.2;
 }
 
-.outcome-sentence {
+.outcome-subtitle {
     color: var(--text-secondary);
     font-size: 1.15rem;
-    line-height: 1.7;
-    margin-bottom: 36px;
-    min-height: 1.5em;   /* keeps space even when empty */
+    font-weight: 400;
+    line-height: 1.6;
+    margin-bottom: 34px;
 }
+
+
+/* ---------- ESSAY PRESENTATION ---------- */
+
+.essay-content {
+    max-width: 780px;
+    padding: 34px 38px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: var(--card-shadow);
+}
+
+.essay-title {
+    color: var(--text);
+    font-size: clamp(1.55rem, 3.2vw, 2rem);
+    font-weight: 650;
+    letter-spacing: -0.5px;
+    line-height: 1.3;
+    margin-bottom: 26px;
+}
+
+.essay-paragraphs p {
+    color: var(--text-secondary);
+    font-size: 1.04rem;
+    line-height: 1.9;
+    margin: 0 0 22px;
+}
+
+.essay-paragraphs p:last-child {
+    margin-bottom: 0;
+}
+
+.content-placeholder {
+    color: var(--muted);
+    font-style: italic;
+    margin: 0;
+}
+
+
+/* ---------- WORKS CITED ---------- */
+
+.works-cited-section {
+    margin-top: 34px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+}
+
+.works-cited-heading {
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 650;
+    margin-bottom: 14px;
+}
+
+.works-cited-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.citation-entry {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.8;
+
+    /* MLA-style hanging indent */
+    padding-left: 1.5rem;
+    text-indent: -1.5rem;
+
+    overflow-wrap: anywhere;
+    margin-bottom: 13px;
+}
+
+.citation-entry:last-child {
+    margin-bottom: 0;
+}
+
+.citation-entry a {
+    color: var(--accent-hover);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.citation-entry a:hover {
+    color: var(--accent);
+}
+
+
+/* ---------- CITATION PAGE ---------- */
+
+.citation-page {
+    max-width: 900px;
+    min-height: calc(100vh - 80px);
+    margin: 0 auto;
+    padding: 90px 6% 80px;
+}
+
+.citation-section-title {
+    color: var(--text);
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin: 34px 0 14px;
+}
+
+.citation-intro {
+    color: var(--text-secondary);
+    max-width: 780px;
+    line-height: 1.8;
+}
+
+.citation-page .works-cited-list {
+    max-width: 780px;
+}
+
+/* Double-spaced entries and hanging indents
+   resemble an academic Works Cited page. */
+
+.citation-page .citation-entry {
+    font-size: 0.96rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+
+/* ---------- BUTTON ---------- */
 
 .button-outline {
     display: inline-block;
-    margin-top: 24px;
+    margin-top: 28px;
     padding: 10px 20px;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -275,39 +434,29 @@ img {
     color: var(--accent);
 }
 
-/* Soft green box for personal outcome writing */
-.outcome-box {
-    margin-top: 2.5rem;
-    padding: 1.75rem 2rem;
-    border: 1px solid #c8e6c9;          /* soft green border */
-    border-radius: 12px;
-    background-color: #f1f8e9;          /* very light green background */
-    max-width: 720px;
-}
 
-.outcome-box .outcome-sentence {
-    margin: 0;
-    line-height: 1.7;
-}
+/* ---------- TABLET / MOBILE ---------- */
 
-/* ---------- MOBILE ---------- */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
+
     .outcome-cards {
         grid-template-columns: repeat(3, 1fr);
     }
+
 }
 
-@media (max-width: 800px) {
+
+@media (max-width: 850px) {
+
     .navbar {
         flex-direction: column;
-        gap: 16px;
+        gap: 14px;
         padding: 16px 20px;
     }
 
     .navbar nav {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 10px 16px;
+        gap: 9px 16px;
     }
 
     .navbar nav a {
@@ -340,13 +489,31 @@ img {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .outcome-page {
+    .outcome-page,
+    .citation-page {
         padding: 70px 24px 60px;
     }
+
+    .essay-content {
+        padding: 28px 25px;
+    }
+
 }
 
-@media (max-width: 500px) {
+
+@media (max-width: 560px) {
+
     .outcome-cards {
         grid-template-columns: 1fr;
     }
+
+    .essay-content {
+        padding: 24px 20px;
+    }
+
+    .essay-paragraphs p {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
 }
