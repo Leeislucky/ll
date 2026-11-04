@@ -10,34 +10,38 @@
 <body>
     <header class="navbar">
         <a href="index.html" class="logo">LEE<span>.</span></a>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="history.html">AI History</a>
-            <a href="ethics.html">AI Ethics</a>
+            <a href="ethics.html" aria-current="page">AI Ethics</a>
             <a href="search.html">AI Search and Reasoning</a>
             <a href="ml.html">ML Fundamentals</a>
             <a href="generative-ai.html">Generative AI</a>
+            <a href="citations.html">Citation Page</a>
         </nav>
     </header>
+
     <main>
         <section class="outcome-page">
             <p class="label">OUTCOME 02</p>
+
             <h1>AI Ethics</h1>
 
             <h2 class="outcome-subtitle">
                 Identify and discuss ethical issues associated with AI and ML and their societal implications.
             </h2>
 
-            <div class="outcome-box">
-                <p class="outcome-sentence" id="personal-text"></p>
+            <div id="essay-content"
+                 class="essay-content"
+                 data-outcome="ethics">
             </div>
 
-            <a href="index.html" class="button-outline">← Back to Home</a>
+            <a href="index.html" class="button-outline">
+                ← Back to Home
+            </a>
         </section>
     </main>
 
     <script src="outcomes-content.js"></script>
-    <script>
-        document.getElementById('personal-text').textContent = outcomeTexts.ethics.trim();
-    </script>
+    <script src="outcomes-render.js"></script>
 </body>
 </html>
